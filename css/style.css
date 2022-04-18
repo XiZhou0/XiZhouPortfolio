@@ -1,0 +1,780 @@
+/* Hero */
+
+/* The hero image */
+.heroimage{
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+}
+
+/* Place text in the middle of the image */
+.herotext {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.skip {
+	color: white;
+	font-size: 16px;
+	/* -webkit-transition: top 1s ease-out;
+	transition: left 1s ease-out;
+	z-index: 1;
+	position: absolute;
+	left: -500px; */
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+
+/* body */
+
+body {
+    font-family: "Abhaya Libre", serif;
+	font-size: 22px;
+}
+
+body, html {
+  height: 100%;
+  color: black;
+  line-height: 1.5;
+  background-image: url("../images/background.jpeg");
+}
+
+h1{
+	font-size: 40px;
+	font-weight: bolder;
+	padding-bottom: 10px;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+
+h3{
+	font-size: 22px;
+	font-weight: bold;
+	color: rgb(83, 83, 83);
+	padding-bottom: 10px;
+}
+
+
+h4{
+	font-size: 20px;
+	padding-bottom: 10px;
+	margin: 0;
+    padding: 0;
+	font-style: italic;
+}
+
+h5{
+	font-size: 15px;
+	color: rgb(114, 114, 114);
+	padding-bottom: 10px;
+}
+
+p{
+	font-size: 20px;
+	padding-bottom: 10px;
+	margin: 0;
+    padding: 0;
+}
+
+#logo {
+	width: 40px;
+	height: auto;
+  }
+
+
+/* Nav */
+*{
+	margin: 0;
+	padding: 0;
+  }
+
+  a{
+	text-decoration: none;
+  }
+
+  .navbar{
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	background-color: #000000;
+	font-size: 20px;
+  }
+
+  .logo{
+	margin-left: 5%;
+	color: #ffffff;
+	font-weight: bold;
+  }
+  .logo_header{
+	display: flex;
+	margin-left: 2%;
+  }
+
+  .main_nav{
+	display: flex;
+	width: 50%;
+	float: right;
+	margin-right: 2%;
+	justify-content: space-between;
+	list-style: none;
+  }
+
+  .main_nav li:hover{
+	background-color: #585858;
+  }
+
+  .main_nav .active{
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+  .main_nav li{
+	display: inline;
+	color: #ffffff;
+  }
+
+  .main_nav li a{
+	color: #ffffff;
+  }
+
+  .navbar_toggle {
+	display: none;
+	}
+
+
+
+
+  @media only screen and (max-width : 900px){
+
+	.navbar{
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  width: 100vw;
+	  padding-top: 2%;
+	  padding-bottom: 2%;
+	  background-color: #000000;
+	  font-size: 16px;
+	}
+
+	.main_nav{
+	  display: none;
+	}
+
+	.show_nav{
+	  padding-top: 2%;
+	  display: flex;
+	  width: 100vw;
+	  height: 100vh;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	}
+
+	.main_nav li{
+	  width: 100%;
+	  height: 50px;
+	  font-size: 16px;
+	  justify-content: center;
+	  text-align: center;
+	  padding: 0%;
+	}
+	.navbar_toggle {
+	  margin-left: 5%;
+	  margin-right: 5%;
+	  font-size: 20px;
+	  color: #ffffff;
+	  background: transparent;
+	  border-color: transparent;
+	  transition: all 0.3s linear;
+	  cursor: pointer;
+	  display: block;
+	}
+	.logo_header{
+	  width: 100%;
+	  justify-content: space-between;
+	  margin-right: 2%;
+	}
+  }
+
+/* Homepage */
+* {
+	box-sizing: border-box;
+  }
+
+  #homepage_intro{
+	padding: 10% 10% 10% 10%;
+  }
+
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+	padding: 10px;
+  }
+
+  /* Create four equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 30%;
+	display: flex;
+	flex-wrap: wrap;
+  }
+
+  /* Clear floats after rows */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  /* Content */
+  .content {
+	background-color: white;
+	padding: 10px;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+	.column {
+	  width: 50%;
+	}
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+	.column {
+	  width: 100%;
+	}
+  }
+
+/* Button */
+.button {
+	background-color: #414141;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.button {
+	transition-duration: 0.4s;
+}
+
+.button:hover {
+	background-color: #888888;
+	color: white;
+}
+
+.fa-angles-down{
+	color: white;
+	text-align: center;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.fa-angles-down {
+	transition-duration: 0.4s;
+  }
+
+.fa-angles-down:hover {
+	color: gray;
+  }
+
+
+/* For Each Page */
+
+.seattle-main-image {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(../images/ToSeattle/droneview.jpeg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.la-main-image {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/LA/plaza2.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.Yosemite-main-image{
+	position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/Yosemite/view1.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.herocontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.herocontainer h1 {
+    margin: 0;
+	text-transform: uppercase;
+}
+
+.herocontainer h1 span {
+    border: 6px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+	text-align: center;
+}
+
+.cen {
+    margin: 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.button {
+    color: #313131;
+    padding: 10px 24px;
+    background: #f1f1f1;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: .6s;
+	font-size: 16px;
+}
+
+.button:hover {
+    opacity: .6;
+}
+
+#content{
+	padding: 10% 10% 10% 10%;
+}
+
+.location{
+	max-width: 1200px;
+  	margin: 0 auto;
+ 	display: grid;
+  	grid-gap: 1rem;
+	padding-bottom: 20%;
+}
+
+@media (min-width: 900px) {
+	.location { grid-template-columns: repeat(2, 1fr); }
+  }
+
+.location2{
+	padding-bottom: 20%;
+}
+
+.location3{
+	max-width: 1200px;
+  	margin: 0 auto;
+ 	display: grid;
+  	grid-gap: 1rem;
+	padding-top: 20%;
+}
+
+.location4{
+	max-width: 1200px;
+  	margin: 0 auto;
+ 	display: grid;
+  	grid-gap: 1rem;
+	padding-bottom: 0%;
+}
+
+
+.highlights{
+	padding-top: 20%;
+}
+
+section{
+	padding-top: 3%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.pagevideo{
+	padding-bottom: 20%;
+}
+
+
+/* Photo Gallery page */
+
+.flip-card-group{
+	display: flex;
+	padding-bottom: 100px;
+}
+
+  .row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	padding: 0 4px 100px 0;
+  }
+  /* Create four equal columns that sits next to each other */
+  .column {
+	-ms-flex: 25%; /* IE10 */
+	flex: 24%;
+	max-width: 25%;
+	padding: 0 4px;
+  }
+
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+	.column {
+	  -ms-flex: 50%;
+	  flex: 50%;
+	  max-width: 50%;
+	}
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+	.column {
+	  -ms-flex: 100%;
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
+
+/* Flip Card */
+.flip-card-container {
+	width: 300px;
+	height: 400px;
+	perspective: 1000px;
+	padding: 10px;
+  }
+  .flip-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+  }
+  .flip-card-container:hover .flip-card {
+	transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+  }
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border-radius: 0.5rem; */
+  }
+  .flip-card-front {
+	background-color: #333;
+	color: #fff;
+  }
+  .flip-card-back {
+	background-color: #517fa4;
+	color: #fff;
+	transform: rotateY(180deg);
+  }
+
+  .flip-card-front img {
+	width: 100%;
+	height: 100%;
+	/* border-radius: 0.5rem; */
+  }
+  .flip-card-back p {
+	text-align: center;
+	margin: 1rem;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+  }
+  .flip-card-back p span {
+	display: block;
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 1.25rem;
+  }
+
+
+/* Image animation*/
+.column.img:hover{
+	transform: scale(1.1);
+}
+
+footer{
+	padding: 20px 20px;
+	font-size: small;
+}
+
+
+/*form*/
+form {
+	background-color: rgb(211, 211, 211);
+	padding: 10%;
+  }
+
+  legend{
+	font-size: 100%;
+	text-transform: uppercase;
+	text-align: center;
+  }
+
+  label{
+	display: inline-block;
+	margin-right:10px;
+	width:30%;
+	font-family: "Abhaya Libre", serif;
+	font-size: 16px;
+	display: flex;
+	flex: auto;
+  }
+
+  input {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 100%;
+  }
+
+  span{
+	font-family: italic;
+	font-weight: bold;
+  }
+
+  textarea{
+	width: 100%;
+	height: 35vh;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+
+
+  input[type=checkbox]{
+	  display:inline;
+	  width:inherit;
+  }
+
+  input[type=submit] {
+	background-color: #2e2e2e;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	font-family: "Abhaya Libre", serif;
+  }
+
+  input[type=submit]:hover {
+	opacity: 0.7;
+  }
+
+  ::placeholder{
+	font-family: "Abhaya Libre", serif;
+  }
+
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (min-width: 900px) {
+	form{
+	  padding: 10%;
+	}
+
+	input{
+	  width: 100%;
+	}
+
+	textarea{
+	  width: 100%;
+	  height: 20vh;
+   }
+
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+  }
+
+
+
+/* animation */
+@keyframes mymove {
+	from  {
+	opacity: 0;
+	width: 10px;}
+	to {
+	opacity: 1;
+	width: 40px;}
+  }
+
+#logo{
+	animation-name: mymove;
+	animation-duration: 1s;
+  }
+
+@media screen and (prefers-reduced-motion: reduce){
+	#logo{
+	  animation: none;
+	}
+}
+
+/* For each detailed page gallery*/
+.container{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows:100px 300px;
+    grid-gap:10px;
+    grid-auto-flow: dense;
+}
+
+.gallery-item{
+    width:100%;
+    height:100%;
+    position:relative;
+	text-align: center;
+}
+
+.gallery-item .image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.gallery-item .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:50% 50%;
+    cursor:pointer;
+    transition:.5s ease-in-out;
+}
+.gallery-item:hover .image img{
+    transform:scale(1.3);
+}
+
+.gallery-item .text{
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-size:25px;
+    pointer-events:none;
+    z-index:4;
+    transition: .3s ease-in-out;
+	backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.gallery-item:hover .text{
+    opacity:1;
+    animation: move-down .3s linear;
+    padding:1em;
+    width:100%;
+	backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-6{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+}
+
+
+@keyframes move-down{
+
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}
